@@ -3,104 +3,436 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="A considered website template for an independent salon or grooming studio." />
-    <title>Lumière Studio — Salon Template</title>
+    <meta name="description" content="STUDIO/81 — Luxury bespoke hair styling, precision coloring, and restorative hair treatments in a chic, moody salon atelier." />
+    <title>STUDIO/81 — Luxury Hair Salon</title>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="overrides.css" />
   </head>
   <body>
-    <div class="scroll-progress" aria-hidden="true"><span></span></div>
-    <header class="site-header">
-      <a class="wordmark" href="#top" aria-label="Lumière Studio home">LUMIÈRE<span>STUDIO</span></a>
-      <nav class="desktop-nav" aria-label="Main navigation">
-        <a href="#services">Services</a><a href="#studio">The studio</a><a href="#journal">Journal</a>
-      </nav>
-      <a class="header-book" href="#book">Book a visit <i>↗</i></a>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu"><span></span><span></span></button>
-      <div class="mobile-menu" id="mobile-menu">
-        <div class="mobile-nav-links">
-          <a href="#services">Services</a>
-          <a href="#studio">The studio</a>
-          <a href="#journal">Journal</a>
-          <a href="#book">Book a visit <i>↗</i></a>
+    <!-- Top Scroll Progress Bar -->
+    <div class="scroll-progress-bar" id="scrollProgressBar" aria-hidden="true">
+      <div class="scroll-progress-fill" id="scrollProgressFill"></div>
+    </div>
+
+    <!-- Top Global Header -->
+    <header class="site-header" id="header">
+      <div class="header-container">
+        <div class="header-left">
+          <a class="brand-logo" href="#hero" aria-label="STUDIO/81 Home">STUDIO/81</a>
         </div>
-        <p class="mobile-menu-tagline">Hair &amp; skin rituals · New Delhi</p>
+
+        <nav class="desktop-nav" aria-label="Primary Navigation">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#services" class="nav-link">Services &amp; Gallery</a>
+          <a href="#blog" class="nav-link">Blog</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="header-right">
+          <button class="nav-book-btn" id="openBookModalBtn">Book</button>
+          <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Toggle Menu">
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Drawer Menu -->
+      <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <div class="mobile-menu-inner">
+          <nav class="mobile-nav-links">
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#services" class="mobile-link">Services &amp; Gallery</a>
+            <a href="#blog" class="mobile-link">Blog</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+          </nav>
+          <div class="mobile-menu-footer">
+            <button class="btn-pill" id="mobileBookBtn">Book an Appointment</button>
+            <div class="mobile-socials">
+              <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
+              <a href="https://facebook.com" target="_blank" rel="noreferrer">Facebook</a>
+              <a href="https://tiktok.com" target="_blank" rel="noreferrer">TikTok</a>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
 
     <main id="top">
-      <section class="hero">
-        <div class="eyebrow hero-eyebrow">Hair & skin rituals · New Delhi</div>
-        <div class="hero-copy">
-          <p class="hero-kicker">THE ART OF TAKING<br />YOUR TIME</p>
-          <h1>Good hair,<br /><em>considered.</em></h1>
-          <p class="hero-intro">A quiet, appointment-led studio for cuts, colour and restorative skin treatments—made around you.</p>
-          <a class="text-link" href="#services">Explore our treatments <span>↓</span></a>
+      <!-- HERO SECTION -->
+      <section class="hero-section" id="hero">
+        <div class="hero-background-wrap">
+          <img class="hero-bg-img" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=2000&q=85" alt="Editorial portrait with flowing long brunette hair" />
+          <div class="hero-gradient-overlay"></div>
         </div>
-        <figure class="hero-image image-reveal">
-          <img src="salon-hero.png" alt="A client receiving a finishing hair style in a calm salon" />
-          <figcaption>01 — A softer kind of luxury</figcaption>
-        </figure>
-        <div class="hero-stamp" aria-hidden="true"><span>EST. 2018 · DELHI · EST. 2018 · DELHI · </span><b>✦</b></div>
-      </section>
 
-      <section class="intro-panel section-pad" id="studio">
-        <p class="eyebrow">Welcome to Lumière</p>
-        <div class="intro-grid">
-          <h2>Beauty has its own<br /><em>pace.</em></h2>
-          <div><p>Step out of the rush and into a space where the details matter. Our artists listen first, then make the work feel effortless.</p><a class="text-link" href="#book">Meet the studio <span>↗</span></a></div>
-        </div>
-      </section>
+        <div class="hero-container">
+          <div class="hero-text-block">
+            <h1 class="hero-title">
+              <span class="hero-title-welcome gsap-reveal">WELCOME</span>
+              <span class="hero-title-studio gsap-reveal"><em>to</em> STUDIO/81</span>
+            </h1>
+            <p class="hero-description gsap-reveal">
+              Our expert stylists craft personalised, stunning looks to elevate your beauty and confidence. Experience our chic, moody salon and let us transform your hair into a masterpiece.
+            </p>
+          </div>
 
-      <section class="services section-pad" id="services">
-        <div class="section-heading"><p class="eyebrow">Our treatments</p><p class="section-note">Tailored, unhurried, and always a little personal.</p></div>
-        <div class="service-list">
-          <a href="#book" class="service-row"><span class="number">01</span><h3>Cut & finish</h3><span class="service-desc">A shape that belongs to you</span><span class="arrow">↗</span></a>
-          <a href="#book" class="service-row"><span class="number">02</span><h3>Colour atelier</h3><span class="service-desc">Dimension in all the right places</span><span class="arrow">↗</span></a>
-          <a href="#book" class="service-row"><span class="number">03</span><h3>Skin rituals</h3><span class="service-desc">Treatments for your slowest hour</span><span class="arrow">↗</span></a>
-          <a href="#book" class="service-row"><span class="number">04</span><h3>Bridal & occasion</h3><span class="service-desc">The finishing touch, thoughtfully done</span><span class="arrow">↗</span></a>
-        </div>
-      </section>
-
-      <section class="feature-grid">
-        <figure class="feature-image image-reveal"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1000&q=85" alt="A modern salon interior" /></figure>
-        <div class="feature-copy"><p class="eyebrow">A place to exhale</p><h2>Come for the<br />craft. Stay for<br /><em>the feeling.</em></h2><p>Natural light, good coffee and a team that remembers your last conversation. We made a studio where looking after yourself feels easy.</p><a class="button-light" href="#book">Plan your visit <span>↗</span></a></div>
-      </section>
-
-      <section class="journal section-pad" id="journal">
-        <div class="section-heading"><p class="eyebrow">From the journal</p><a class="text-link" href="#journal">View all notes <span>↗</span></a></div>
-        <div class="journal-grid">
-          <article><div class="journal-image"><img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=900&q=80" alt="Hair colour preparation" /></div><p class="article-meta">COLOUR NOTES · 4 MIN READ</p><h3>The case for a lived-in blonde</h3><a href="#journal" aria-label="Read The case for a lived-in blonde">Read story ↗</a></article>
-          <article><div class="journal-image"><img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=900&q=80" alt="Relaxing face treatment" /></div><p class="article-meta">SKIN SCHOOL · 3 MIN READ</p><h3>What your facialist wishes you knew</h3><a href="#journal" aria-label="Read What your facialist wishes you knew">Read story ↗</a></article>
+          <div class="hero-social-sidebar gsap-reveal" aria-label="Social media links">
+            <a href="https://instagram.com" target="_blank" rel="noreferrer" class="social-icon" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noreferrer" class="social-icon" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://tiktok.com" target="_blank" rel="noreferrer" class="social-icon" aria-label="TikTok">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+            </a>
+          </div>
         </div>
       </section>
 
-      <section class="studio-notes section-pad">
-        <div class="notes-heading"><p class="eyebrow">The Lumière way</p><h2>Made to feel<br /><em>like your place.</em></h2></div>
-        <div class="notes-list">
-          <article><span>01</span><h3>Start with a conversation</h3><p>Every first appointment begins with a relaxed consultation—your routine, your reference photos, your real life.</p></article>
-          <article><span>02</span><h3>Leave with a plan</h3><p>We will show you the easy, practical ways to keep your look feeling good long after you step out.</p></article>
-          <article><span>03</span><h3>Come back to yourself</h3><p>No rushing, no guesswork. Just thoughtful work and a little time set aside for you.</p></article>
+      <!-- SECTION 2: OUR PREMIUM SERVICES -->
+      <section class="editorial-section reveal-section" id="services">
+        <div class="page-container">
+          <div class="section-top-row">
+            <div class="section-title-wrap">
+              <h2 class="section-title">Our Premium <em>Services</em></h2>
+            </div>
+            <div class="section-info-wrap">
+              <p class="section-description">
+                At the Studio/81, we take pride in offering top-notch hair care services tailored to your unique needs. Our experienced stylists use the latest techniques and high-quality products to ensure you leave our salon looking and feeling fabulous.
+              </p>
+              <a href="#servicesGrid" class="btn-pill">View All Services</a>
+            </div>
+          </div>
+
+          <div class="services-cards-grid" id="servicesGrid">
+            <!-- Card 1 -->
+            <div class="service-tile hover-lift">
+              <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=900&q=80" alt="Precision Haircut & Styling" class="service-tile-img" loading="lazy" />
+              <div class="service-tile-scrim"></div>
+              <div class="service-tile-content">
+                <h3 class="service-tile-title">Haircut &amp; Styling</h3>
+                <p class="service-tile-text">
+                  Our expert stylists craft the perfect haircut to suit your face shape and personal style. From classic cuts to the latest trends, we've got you covered.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="service-tile hover-lift">
+              <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=900&q=80" alt="Professional Hair Coloring" class="service-tile-img" loading="lazy" />
+              <div class="service-tile-scrim"></div>
+              <div class="service-tile-content">
+                <h3 class="service-tile-title">Hair Coloring</h3>
+                <p class="service-tile-text">
+                  Transform your look with our professional hair coloring services. Choose from a wide range of shades or let our color specialists create a custom hue just for you.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="service-tile hover-lift">
+              <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=900&q=80" alt="Restorative Scalp & Hair Treatments" class="service-tile-img" loading="lazy" />
+              <div class="service-tile-scrim"></div>
+              <div class="service-tile-content">
+                <h3 class="service-tile-title">Hair Treatments</h3>
+                <p class="service-tile-text">
+                  Revitalize your locks with our nourishing hair treatments. From deep conditioning to keratin smoothing, our treatments are designed to repair, protect, and enhance your hair's natural beauty.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="booking" id="book">
-        <p class="eyebrow">Your chair is waiting</p>
-        <h2>Make time for<br /><em>yourself.</em></h2>
-        <a class="booking-button" href="https://wa.me/919999999999" target="_blank" rel="noreferrer">Book on WhatsApp <span>↗</span></a>
-        <p class="booking-note">Or call us at <a href="tel:+919999999999">+91 99999 99999</a></p>
+      <!-- SECTION 3: MEET OUR EXPERT STYLIST -->
+      <section class="editorial-section reveal-section" id="about">
+        <div class="page-container">
+          <div class="section-top-row">
+            <div class="section-title-wrap">
+              <h2 class="section-title">Meet Our<br /><em>Expert Stylist</em></h2>
+            </div>
+            <div class="section-info-wrap">
+              <p class="section-description">
+                At the Studio/81, our team of highly skilled stylists is dedicated to providing you with the ultimate hair care experience. With years of industry experience and a passion for staying on top of the latest trends, our experts are ready to bring your hair dreams to life.
+              </p>
+              <a href="#showcase" class="btn-pill">Get to Know Us</a>
+            </div>
+          </div>
+
+          <div class="salon-interior-banner hover-lift">
+            <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1920&q=85" alt="Modern chic luxury hair salon interior with glowing lighting" loading="lazy" />
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: SHOWCASE GALLERY -->
+      <section class="editorial-section reveal-section" id="showcase">
+        <div class="page-container">
+          <div class="section-top-row">
+            <div class="section-title-wrap">
+              <h2 class="section-title"><em>Showcase</em></h2>
+            </div>
+            <div class="section-info-wrap">
+              <p class="section-description">
+                We invite you to explore our gallery and witness the artistry and skill of our talented stylists. Discover the range of stunning looks we've created for our clients, showcasing our dedication to quality, creativity, and personalized care.
+              </p>
+              <a href="#showcaseGrid" class="btn-pill">View Full Gallery</a>
+            </div>
+          </div>
+
+          <div class="showcase-quad-grid" id="showcaseGrid">
+            <div class="showcase-cell hover-lift">
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=80" alt="Sculpted men's modern texture style" loading="lazy" />
+            </div>
+            <div class="showcase-cell hover-lift">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80" alt="Clean editorial blonde silhouette" loading="lazy" />
+            </div>
+            <div class="showcase-cell hover-lift">
+              <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80" alt="Warm golden blowout with volume" loading="lazy" />
+            </div>
+            <div class="showcase-cell hover-lift">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Dimensional brunette waves" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: HAPPY CLIENTS SPEAK -->
+      <section class="editorial-section reveal-section" id="reviews">
+        <div class="page-container">
+          <div class="section-top-row">
+            <div class="section-title-wrap">
+              <h2 class="section-title">Happy Clients <em>Speak</em></h2>
+            </div>
+            <div class="section-info-wrap">
+              <p class="section-description">
+                Discover the Studio/81 difference through the words of our valued clients. Read their experiences and learn how our talented stylists have helped them achieve their hair goals and boost their confidence.
+              </p>
+              <a href="https://google.com" target="_blank" rel="noreferrer" class="btn-pill">Read Our Google Reviews</a>
+            </div>
+          </div>
+
+          <div class="social-cards-grid">
+            <!-- Review 1 -->
+            <div class="social-review-card hover-lift">
+              <div class="social-review-photo">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80" alt="Client Julia M." loading="lazy" />
+              </div>
+              <div class="social-action-row">
+                <button class="like-button" data-likes="114" aria-label="Like testimonial">
+                  <svg class="heart-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                  </svg>
+                </button>
+              </div>
+              <span class="likes-count">114 likes</span>
+              <p class="social-caption">
+                <strong class="handle">@salon_stylejourney</strong>
+                “From the moment I walked into Studio/81, I knew I was in good hands. The atmosphere is chic and inviting, and the stylists are attentive. I asked for a complete hair transformation, and they exceeded all my expectations. My new look is stunning, and I've received so many compliments. I can't wait for my next appointment!”
+              </p>
+              <span class="social-author">— Julia M.</span>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="social-review-card hover-lift">
+              <div class="social-review-photo">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80" alt="Client Alex R." loading="lazy" />
+              </div>
+              <div class="social-action-row">
+                <button class="like-button" data-likes="156" aria-label="Like testimonial">
+                  <svg class="heart-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                  </svg>
+                </button>
+              </div>
+              <span class="likes-count">156 likes</span>
+              <p class="social-caption">
+                <strong class="handle">@alexr_fashionforward</strong>
+                “I've been a loyal client of Studio/81 for over a year now, and I'm consistently impressed by their level of skill and attention to detail. The staff always listens to my ideas and offers valuable input to ensure my hair looks its best. The salon's dark and moody vibe only adds to the unique and memorable experience. Highly recommended!”
+              </p>
+              <span class="social-author">— Alex R.</span>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="social-review-card hover-lift">
+              <div class="social-review-photo">
+                <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=800&q=80" alt="Client Samantha L." loading="lazy" />
+              </div>
+              <div class="social-action-row">
+                <button class="like-button" data-likes="87" aria-label="Like testimonial">
+                  <svg class="heart-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                  </svg>
+                </button>
+              </div>
+              <span class="likes-count">87 likes</span>
+              <p class="social-caption">
+                <strong class="handle">@samanthal.beautyinspo</strong>
+                “I recently visited Studio/81 for a hair treatment, and I couldn't be happier with the results. My hair was dry and damaged, but their deep conditioning treatment worked wonders. The staff was friendly and knowledgeable, and they genuinely cared about my hair's health. I've finally found my go-to salon!”
+              </p>
+              <span class="social-author">— Samantha L.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 6: HAIR CARE TIPS & TRICKS -->
+      <section class="editorial-section reveal-section" id="blog">
+        <div class="page-container">
+          <div class="section-title-wrap" style="margin-bottom: 40px;">
+            <h2 class="section-title">Hair Care Tips<br /><em>&amp; Tricks</em></h2>
+          </div>
+
+          <div class="blog-dual-grid">
+            <!-- Blog 1 -->
+            <article class="blog-item hover-lift">
+              <div class="blog-item-media">
+                <img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?auto=format&fit=crop&w=1000&q=80" alt="The Art of Balayage" loading="lazy" />
+              </div>
+              <div class="blog-item-body">
+                <span class="blog-item-date">April 12 — 2023</span>
+                <h3 class="blog-item-title">The Art of Balayage: What You Need to Know</h3>
+                <p class="blog-item-snippet">
+                  Discover the magic of balayage, the popular hair colouring technique that creates natural-looking, sun-kissed highlights. Learn about the process, maintenance, and why it might be the perfect choice for your next hair transformation. <a href="#blog" class="blog-link">Read 'The Art of Balayage' Blog</a>
+                </p>
+              </div>
+            </article>
+
+            <!-- Blog 2 -->
+            <article class="blog-item hover-lift">
+              <div class="blog-item-media">
+                <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=1000&q=80" alt="How to Choose the Perfect Haircut for Your Face Shape" loading="lazy" />
+              </div>
+              <div class="blog-item-body">
+                <span class="blog-item-date">May 18 — 2023</span>
+                <h3 class="blog-item-title">How to Choose the Perfect Haircut for Your Face Shape</h3>
+                <p class="blog-item-snippet">
+                  Not all haircuts are created equal, and finding the perfect one for you can be challenging. In this blog post, we break down the different face shapes and offer expert advice on choosing the most flattering haircut to enhance your features. <a href="#blog" class="blog-link">Read 'How to Choose the Perfect Haircut' Blog</a>
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
       </section>
     </main>
-    <footer>
-      <a class="wordmark" href="#top">LUMIÈRE<span>STUDIO</span></a>
-      <p class="footer-intro">For hair, skin &amp; slow moments.</p>
-      <div class="footer-links"><a href="#top">Instagram</a><a href="#top">Directions</a><a href="#journal">Journal</a></div>
-      <div class="footer-bottom"><p>© 2026 Lumière Studio</p><p>Hair & skin rituals · New Delhi</p><div><a href="#studio">Studio</a><a href="#book">Contact</a><a href="#top">Back to top ↑</a></div></div>
+
+    <!-- FOOTER / NEWSLETTER -->
+    <footer class="studio-footer" id="contact">
+      <!-- Newsletter CTA Block -->
+      <div class="footer-newsletter-block">
+        <div class="page-container">
+          <div class="footer-cta-block">
+            <h2 class="footer-heading">Subscribe to Our Mailing List</h2>
+            <form class="subscribe-form" id="newsletterForm">
+              <div class="subscribe-input-row">
+                <input type="email" placeholder="Enter your email address" aria-label="Email address" required id="newsletterEmail" />
+                <button type="submit" aria-label="Submit email">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+              <p class="subscribe-msg" id="newsletterStatus" role="status"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Structured Bottom Footer -->
+      <div class="footer-bottom-block">
+        <div class="page-container">
+          <div class="footer-grid-row footer-row-top">
+            <div class="footer-cell footer-cell-left">
+              <a class="footer-brand" href="#hero">STUDIO<span class="footer-brand-sep">/</span>81</a>
+            </div>
+            <div class="footer-cell footer-cell-center">
+              <p class="footer-tagline">For hair, skin &amp; slow moments.</p>
+            </div>
+            <div class="footer-cell footer-cell-right">
+              <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
+              <a href="#showcase">Directions</a>
+              <a href="#blog">Journal</a>
+            </div>
+          </div>
+
+          <div class="footer-grid-row footer-row-bottom">
+            <div class="footer-cell footer-cell-left">
+              <p class="footer-copy">© 2026 STUDIO/81</p>
+            </div>
+            <div class="footer-cell footer-cell-center">
+              <p class="footer-descriptor">HAIR &amp; SKIN RITUALS · NEW DELHI</p>
+            </div>
+            <div class="footer-cell footer-cell-right">
+              <a href="#about">Studio</a>
+              <a href="#contact">Contact</a>
+              <a href="#hero">Back to top ↑</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
+
+    <!-- INTERACTIVE BOOKING MODAL -->
+    <div class="modal-backdrop" id="bookModal" aria-hidden="true">
+      <div class="modal-dialog" role="dialog" aria-labelledby="modalTitle">
+        <button class="modal-close-btn" id="closeBookModalBtn" aria-label="Close modal">✕</button>
+        <div class="modal-header">
+          <span class="modal-pretitle">STUDIO/81 RESERVATION</span>
+          <h3 id="modalTitle">Book Your Appointment</h3>
+          <p class="modal-subtitle">Experience our bespoke hair artistry. Reserve your session below.</p>
+        </div>
+        <form class="modal-form" id="bookingForm">
+          <div class="form-row">
+            <div class="form-col">
+              <label for="clientName">Full Name</label>
+              <input type="text" id="clientName" required placeholder="Eleanor Vance" />
+            </div>
+            <div class="form-col">
+              <label for="clientPhone">Phone Number</label>
+              <input type="tel" id="clientPhone" required placeholder="+1 (555) 019-2834" />
+            </div>
+          </div>
+          <div class="form-col">
+            <label for="serviceSelect">Service Ritual</label>
+            <select id="serviceSelect" required>
+              <option value="">Select a service</option>
+              <option value="cut-style">Haircut &amp; Styling</option>
+              <option value="color">Hair Coloring &amp; Balayage</option>
+              <option value="treatment">Restorative Hair Treatment</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-col">
+              <label for="bookingDate">Date</label>
+              <input type="date" id="bookingDate" required />
+            </div>
+            <div class="form-col">
+              <label for="bookingTime">Time Slot</label>
+              <select id="bookingTime" required>
+                <option value="morning">Morning (10:00 AM - 1:00 PM)</option>
+                <option value="afternoon">Afternoon (1:00 PM - 5:00 PM)</option>
+                <option value="evening">Evening (5:00 PM - 8:00 PM)</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn-modal-submit">Confirm Reservation</button>
+        </form>
+        <div class="booking-confirmation" id="bookingConfirmation" style="display: none;">
+          <h4>Reservation Requested</h4>
+          <p>Thank you for choosing STUDIO/81. Our concierge will contact you shortly to confirm your booking.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- GSAP & Lenis CDN Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script>
     <script src="script.js"></script>
   </body>
